@@ -1,0 +1,83 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* ✅ FIXED */
+}
+
+/* Root variables */
+:root {
+  --primary-bg: #09090B;
+  --secondary-bg: #141319;
+  --tertiary-bg: #17171C;
+}
+
+/* Base styles */
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: #fff;
+  font-family: system-ui, -apple-system, sans-serif;
+
+  /* Better rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Gradient text */
+.sp-text {
+  background: conic-gradient(at top, #c084fc, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Icons (Responsive Fix) */
+.icon {
+  padding: 10px;              /* smaller default */
+  font-size: 18px;
+  border: 1px solid #1f2937;
+  border-radius: 10px;
+  background-color: var(--secondary-bg);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.icon:hover {
+  background-color: #1f1f25;
+  transform: scale(1.05);
+}
+
+/* Responsive icon scaling */
+@media (min-width: 640px) {
+  .icon {
+    padding: 12px;
+    font-size: 20px;
+  }
+}
+
+/* Prevent overflow issues globally */
+img, iframe {
+  max-width: 100%;
+  display: block;
+}
+
+/* Scrollbar (optional but premium feel) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
