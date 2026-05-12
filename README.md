@@ -152,12 +152,6 @@ npm run dev
 
 ---
 
-# 📸 Screenshots
-
-Add scre
-
----
-
 # 🌟 Future Improvements
 
 - Multi-framework support (Vue, Angular)
